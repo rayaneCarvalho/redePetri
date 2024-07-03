@@ -2,23 +2,23 @@ package org.example;
 
 public class Lugar {
     private String nome;
-    private int tokens;
+    private int fichas;
 
-    public Lugar(String nome, int tokens) {
+    public Lugar(String nome, int fichas) {
         this.nome = nome;
-        this.tokens = tokens;
+        this.fichas = fichas;
     }
 
-    public void adicionarTokens(int quantidade) {
-        this.tokens += quantidade;
+    public void adicionarFichas(int quantidade) {
+        this.fichas += quantidade;
     }
 
-    public void removerTokens(int quantidade) {
-        this.tokens -= quantidade;
+    public void removerFichas(int quantidade) {
+        this.fichas -= quantidade;
     }
 
-    public boolean temTokensSuficientes(int quantidade) {
-        return this.tokens >= quantidade;
+    public boolean temFichasSuficientes(int quantidade) {
+        return this.fichas >= quantidade;
     }
 
     public String getNome() {
@@ -27,7 +27,7 @@ public class Lugar {
 
     @Override
     public String toString() {
-        return nome + ": " + tokens;
+        return nome + ": " + fichas;
     }
 }
 

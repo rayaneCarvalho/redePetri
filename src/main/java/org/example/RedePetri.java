@@ -15,7 +15,7 @@ public class RedePetri {
 
     public boolean podeDisparar(int transicaoIndex) {
         for (int i = 0; i < lugares.length; i++) {
-            if (matrizEntrada[i][transicaoIndex] > 0 && !lugares[i].temTokensSuficientes(matrizEntrada[i][transicaoIndex])) {
+            if (matrizEntrada[i][transicaoIndex] > 0 && !lugares[i].temFichasSuficientes(matrizEntrada[i][transicaoIndex])) {
                 return false;
             }
         }
@@ -26,10 +26,10 @@ public class RedePetri {
         if (podeDisparar(transicaoIndex)) {
             for (int i = 0; i < lugares.length; i++) {
                 if (matrizEntrada[i][transicaoIndex] > 0) {
-                    lugares[i].removerTokens(matrizEntrada[i][transicaoIndex]);
+                    lugares[i].removerFichas(matrizEntrada[i][transicaoIndex]);
                 }
                 if (matrizSaida[i][transicaoIndex] > 0) {
-                    lugares[i].adicionarTokens(matrizSaida[i][transicaoIndex]);
+                    lugares[i].adicionarFichas(matrizSaida[i][transicaoIndex]);
                 }
             }
         }
